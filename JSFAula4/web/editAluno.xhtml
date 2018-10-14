@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view>
+        <h:head>
+        </h:head>
+        <h:body>
+            <h:form>
+                <p:fieldset legend="Aluno">
+                    <p:panelGrid columns="2">
+                        <h:outputLabel value="Nome: "/>
+                        <p:inputText value="#{alunoMB.aluno.nome}"/>
+
+                        <h:outputLabel value="Matricula: "/>
+                        <p:inputText value="#{alunoMB.aluno.matricula}"/>
+
+                        <h:outputLabel value="Data de Nascimento: "/>
+                        <p:inputMask mask="99/99/9999" value="#{alunoMB.aluno.dataNascimento}"/>
+
+                        <p:commandButton action="listAluno.xhtml" value="Cancelar" />
+                        <p:commandButton action="#{alunoMB.salvar()}" value="Salvar"/>
+                    </p:panelGrid>
+                </p:fieldset>
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
+

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:view>
+        <h:head>
+
+        </h:head>
+        <h:body>
+            <h:form>
+                <h:outputLabel value="Nome:" />
+                <h:inputText value="#{alunoMB.aluno.nome}" />
+                <br />
+                <h:outputLabel value="Matricula:" />
+                <h:inputText value="#{alunoMB.aluno.matricula}" />
+                <br />
+                <h:outputLabel value="Data de Nascimento:" />
+                <h:inputText value="#{alunoMB.aluno.dataNascimento}" />
+                <br />
+                <h:commandButton action="#{alunoMB.salvar}" value="Enviar" />
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
+
